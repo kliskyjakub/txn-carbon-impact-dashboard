@@ -1,0 +1,25 @@
+.main_wrapper {
+    background-color: white;
+}
+.landing_wrapper {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+.landing_wrapper a{
+    text-decoration: none;
+    color: #2D2D2D;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size:14px;
+}
+.gif {
+    display: block;
+    margin: auto;
+    height: 30vh;
+    margin-bottom: 3vh;
+}

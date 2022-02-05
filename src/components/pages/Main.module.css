@@ -1,0 +1,88 @@
+.main_wrapper {
+    min-height: 100vh;
+}
+
+.nav_account_wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.nav_account_actions {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin-right: 1rem;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.account_text {
+    font-weight: 600;
+    color: gray;
+    font-size: 14px;
+}
+
+.account_button {
+    z-index: 1;
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    border: none;
+    background: black;
+    color: #fff;
+    border-radius: 1rem;
+    border: 1px dotted white;
+}
+
+.section_seperator {
+    width: 2rem;
+    border-bottom: 1.5px solid white;
+    margin: 0 auto;
+}
+
+.page_wrapper {
+    position: relative;
+    min-height: 100vh;
+    vertical-align: center;
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size:14px;
+}
+.page_wrapper a{
+    text-decoration: none;
+    color: white;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size:14px;
+}
+.social {
+    display: inline;
+    height: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.nav_btn {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 500px){
+    .account_text {
+        display: none;
+    }
+}

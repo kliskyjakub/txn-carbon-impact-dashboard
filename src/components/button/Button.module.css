@@ -1,0 +1,28 @@
+.button {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+
+    cursor: pointer;
+    border: none;
+    background: #2D2D2D;
+    color: #fff;
+    border-radius: 2rem;
+}
+
+.button_outline {
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2rem;
+}

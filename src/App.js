@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext, useEffect} from "react";
+import "./App.css";
+import Landing from "./components/pages/Landing";
+import Main from "./components/pages/Main";
+import {WalletContext} from "./store/WalletContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const {currentAccount, setCurrentAccount} = useContext(WalletContext);
+
+  const checkIfWalletIsConnected = async () => {
+    const {ethereum} = window;
+
+    if (!ethereum) {
+      console.log("Make sure you have metamask!");
+      return;
+    } else {
+      console.log("We have the ethereum object", ethereum);
+    }
+
+    const accounts = await ethereum.request({method: "eth_accounts"});
+
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log("Found an authorized account:", account);
+      setCurrentAccount(account);
+    } else {
+      console.log("No authorized account found");
+    }
+  };
+
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, []);
+
+  return <>{!currentAccount ? <Landing/> : <Main/>}</>;
+};
 
 export default App;
