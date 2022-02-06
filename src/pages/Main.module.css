@@ -1,6 +1,18 @@
 .main_wrapper {
     min-height: 100vh;
-    background-color: black;
+}
+.navigation_wrapper {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.nav_logo_wrapper {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.logo {
+    height: 3rem;
 }
 
 .nav_account_wrapper {
@@ -37,10 +49,9 @@
 
     cursor: pointer;
     border: none;
-    background: black;
+    background: #038037;
+    color: #fff;
     border-radius: 1rem;
-    border: 1px dotted white;
-    font-family: 'Calibri';
 }
 
 .page_wrapper {
@@ -54,11 +65,12 @@
     gap: 2rem;
     align-items: center;
     text-align: center;
+    color: white;
     font-size:14px;
-    margin-top: -4.4em;
 }
 .page_wrapper a{
     text-decoration: none;
+    color: white;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-size:14px;
@@ -67,6 +79,7 @@
     display: inline;
     height: 20px;
     margin: 10px;
+    margin-bottom: 30px;
 }
 .nav_btn {
     display: inline-block;

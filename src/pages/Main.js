@@ -1,9 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 import {Link, Routes, Route, useNavigate, Navigate} from "react-router-dom";
 import styles from "./Main.module.css";
-import {WalletContext} from "../../store/WalletContext";
+import {WalletContext} from "../store/WalletContext";
 // import Docs from "./Docs";
 import Home from "./Home";
+import logo from "../Txn_Carbon.png";
 
 
 const Main = () => {
@@ -35,6 +36,9 @@ const Main = () => {
     return (
         <div className={styles["main_wrapper"]}>
             <div className={styles["navigation_wrapper"]}>
+                <div className={styles["nav_logo_wrapper"]}>
+                    <img src={logo} className={styles["logo"]} alt="Logo"/>
+                </div>
                 <div className={styles["nav_account_wrapper"]}>
                     <div className={styles["nav_account_actions"]}>
                         <div

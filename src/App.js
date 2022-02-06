@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from "react";
 import "./App.css";
-import Landing from "./components/pages/Landing";
-import Main from "./components/pages/Main";
+import Landing from "./pages/Landing";
+import Main from "./pages/Main";
 import {WalletContext} from "./store/WalletContext";
 
 const App = () => {

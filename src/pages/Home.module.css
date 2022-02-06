@@ -1,0 +1,20 @@
+.page_wrapper {
+    position: relative;
+    min-height: 100vh;
+    vertical-align: center;
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    font-size:14px;
+    margin-top: -4.4em;
+}
+.page_wrapper a{
+    text-decoration: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size:14px;
+}

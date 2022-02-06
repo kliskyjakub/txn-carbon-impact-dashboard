@@ -1,9 +1,9 @@
-import Button from "../button/Button";
+import Button from "../components/button/Button";
 import styles from "./Landing.module.css";
 import React, {useContext, useEffect, useState} from "react";
 import {DotLoader} from "react-spinners";
-import {WalletContext} from "../../store/WalletContext";
-// import logo from './sun.gif';
+import {WalletContext} from "../store/WalletContext";
+import logo from '../Txn_Carbon.png';
 import {ethers} from "ethers";
 import Web3Modal from "web3modal";
 
@@ -38,8 +38,7 @@ const Landing = () => {
         <div className={styles["main_wrapper"]}>
             <div className={styles["landing_wrapper"]}>
                 <a href="https://yiume.eu" className="main">
-                    {/*<img src={logo} className={styles["logo"]} alt="Logo"/>*/}
-                    txn carbon impact dashboard
+                    <img src={logo} className={styles["logo"]} alt="Logo"/>
                 </a>
                 <div className={styles["button_wrapper"]}>
                     {!currentAccount && (
