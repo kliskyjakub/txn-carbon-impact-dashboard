@@ -38,6 +38,14 @@ const Main = () => {
             <div className={styles["navigation_wrapper"]}>
                 <div className={styles["nav_logo_wrapper"]}>
                     <img src={logo} className={styles["logo"]} alt="Logo"/>
+                    <Link to="/" style={{
+                        display: 'inline', paddingLeft: '15px',
+                        paddingRight: '15px'
+                    }}>Home</Link>
+                    <Link to="/docs" style={{
+                        display: 'inline', paddingLeft: '15px',
+                        paddingRight: '15px'
+                    }}>Docs</Link>
                 </div>
                 <div className={styles["nav_account_wrapper"]}>
                     <div className={styles["nav_account_actions"]}>
