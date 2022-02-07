@@ -60,7 +60,11 @@ const Main = () => {
 
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                {/*<Route path="/docs" element={<Docs/>}/>*/}
+                <Route path="/docs" element={<Docs/>}/>
+                <Route path='/docs' component={() => {
+                    window.location.href = 'https://txn-carbon-lbl.gitbook.io/txn-carbon/';
+                    return null;
+                }}/>
                 <Route path="*" element={<Navigate replace to="/"/>}></Route>
             </Routes>
         </div>

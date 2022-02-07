@@ -2,9 +2,6 @@ import styles from "./Home.module.css";
 import {React, useEffect, useState} from "react";
 import axios from "axios";
 import BarChart from '../components/barChart/BarChart.js';
-import { render } from 'react-dom';
-import Highcharts from 'highcharts/highstock';
-import HighchartsReact from 'highcharts-react-official';
 
 const Home = () => {
     const [data, setData] = useState(null);
@@ -14,51 +11,11 @@ const Home = () => {
     const [error, setError] = useState(null);
 
     const dataa = [
-        {year: 1980, sales: 8949000},
-        {year: 1985, sales: 10979000},
-        {year: 1990, sales: 9303000},
-        {year: 1991, sales: 8185000},
-        {year: 1992, sales: 8213000},
-        {year: 1993, sales: 8518000},
+        {year: 2019, sales: 8949000},
+        {year: 2020, sales: 10979000},
+        {year: 2021, sales: 9303000},
+        {year: 2022, sales: 12979000},
     ]
-
-        // const getCo2 = async (txnData) => {
-            // console.log(num_txn * 0.0003)
-            // let blockNumber = txnData.blockNumber;
-            // console.log(blockNumber);
-            //
-            // const getBlockData = async () => {
-            //     try {
-            //         const response = await axios.get(
-            //             `https://api.polygonscan.com/api?module=block&action=getblockreward&blockno=` + blockNumber + `&apikey=7EJW51Y7WBIPAJIP412WA9V7SK14QIUPHC`
-            //         );
-            //         let blockMiner = response.data.result.blockMiner;
-            //         console.log(blockMiner);
-            //
-            //         const getTotalBlocksData = async () => {
-            //             try {
-            //                 const response = await axios.get(
-            //                     `https://api.polygonscan.com/api?module=account&action=getminedblocks&address=`+blockMiner+`&blocktype=blocks&startblock=10000000&apikey=7EJW51Y7WBIPAJIP412WA9V7SK14QIUPHC`
-            //                 );
-            //                 console.log(response.data.result)
-            //                 setError(null);
-            //             } catch (err) {
-            //                 setData(null);
-            //             } finally {
-            //                 setLoading(false);
-            //             }
-            //         };
-            //         getTotalBlocksData()
-            //         setError(null);
-            //     } catch (err) {
-            //         setData(null);
-            //     } finally {
-            //         setLoading(false);
-            //     }
-            // };
-            // getBlockData();
-            // console.log("------");
-        // }
 
     useEffect(() => {
         const getData = setInterval(async () => {
@@ -71,9 +28,15 @@ const Home = () => {
                     let timestampsArr = timestamps;
                     timestampsArr[i] = response.data.result[i].timeStamp;
                     setTimestamps(timestampsArr);
+                    // let a = JSON.parse(data);
+                    // a.push({year: parseInt(timestampsArr[i]), sales: 1})
                 }
 
-                console.log(new Date(timestamps[0]).getMonth());
+                // console.log(timestamps[1])
+                // let a = parseInt(timestamps[1])
+                // let date = new Date(a)
+                // console.log(date);
+                // console.log(date.getMonth());
                 setData(response.data.result.length);
                 setTxnData(response.data.result);
                 setError(null);
